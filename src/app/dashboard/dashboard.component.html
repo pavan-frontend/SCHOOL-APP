@@ -1,9 +1,16 @@
 <div class="parent">
     <div class="left">
-      
+        <h1>DASHBOARD</h1>
+        <h3 routerLink="Home">HOME</h3>
+        <h3 routerLink="CreateStudent">CREATE STUDENT</h3>
+        <h3 routerLink="Allstudents">ALL STUDENTS</h3>
+
+
+      <button class="btn btn-danger button1">LOG OUT</button>
     </div>
     <div class="right">
-
+       <router-outlet></router-outlet>
 
     </div>
+
 </div>

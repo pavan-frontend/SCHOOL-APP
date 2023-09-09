@@ -7,13 +7,19 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { AllstudentsComponent } from './allstudents/allstudents.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PagenotfoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent,
+    CreatestudentComponent,
+    AllstudentsComponent
   ],
   imports: [
     BrowserModule,

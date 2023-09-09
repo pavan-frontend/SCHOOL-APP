@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+}
+
+.left{
+    height: 100%;
+    width: 25%;
+    background-color: aqua;
+}
+h1{
+    color: black;
+    text-align: center;
+}
+h3:hover{
+    cursor: pointer;
+    background-color: brown;
+    border-radius: 10px;
+    padding: 10px;
+    color: aliceblue;
+    
+}
+h3{
+    text-align: center;
+    margin: 40px 10px;
+    color: rgb(59, 15, 220);
+}
+.button1{
+
+    margin-left: 100px;
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin-top: 500px;
+    
+    
+
+}
+.right{
+    width: 75%;
+    background-color: antiquewhite;
+}

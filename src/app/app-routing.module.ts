@@ -6,11 +6,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { AllstudentsComponent } from './allstudents/allstudents.component';
+import { authenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
   {path:"login",component:LoginComponent},
-  {path:"dashboard",component:DashboardComponent,children:[
+  {path:"dashboard",component:DashboardComponent, canActivate:[authenticationGuard], children:[
     {path:"Home",component:HomeComponent},
     {path:"CreateStudent",component:CreatestudentComponent},
     {path:"Allstudents",component:AllstudentsComponent}

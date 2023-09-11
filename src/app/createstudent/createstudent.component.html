@@ -1,1 +1,67 @@
-<p>createstudent works!</p>
+<h1>STUDENT REGISTRATION FORM</h1>
+<div class="parent">
+
+    <form [formGroup]="studentform">
+        <label>Name:</label>
+        <input type="text" formControlName="name"><br>
+
+        <label>Class:</label>
+        <input type="text" formControlName="class"><br>
+
+        <label>FatherName:</label>
+        <input type="text" formControlName="fatherName"><br>
+
+        <label>Email:</label>
+        <input type="email" formControlName="email"><br>
+
+        <label>DOB:</label>
+        <input type="date" formControlName="dateofbirth"><br>
+
+        <div formGroupName="address">
+            <label>City</label>
+            <input type="text" formControlName="city"><br>
+
+            <label class="form-label">state</label>
+            <select class="form-control" formControlName="state" class="state">
+                <input type="text" class="form-control" formControlName="state">
+                <option>State</option>
+                <option>Telangana</option>
+                <option>AndhraPradesh</option>
+            </select>
+            <br>
+            <label>Pincode</label>
+            <input type="number" formControlName="pincode">
+
+        </div>
+
+        <label class="labele2">Type</label>
+        <label class="label2">Days Scholar</label>
+        <input type="radio" name="type" formControlName="type" value="dayScholar" class="radio">
+        <label class="label2">Residential</label>
+        <input type="radio" name="type" formControlName="type" value="residential" class="radio">
+        <br>
+
+        <div *ngIf="studentform.get('type')?.value == 'dayScholar'">
+            <label>Bus Fee</label>
+            <input type="number" formControlName="busFee">
+            <br>
+
+        </div>
+
+        <div *ngIf="studentform.get('type')?.value == 'residential'">
+
+            <label>Hostel Fee</label>
+            <input type="number" formControlName="hostelFee">
+        </div>
+
+
+
+
+        <button (click)="Submit()" class=" btn btn-secondary but">Submit</button>
+
+
+
+
+
+    </form>
+</div>

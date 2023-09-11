@@ -1,12 +1,13 @@
 <div class="parent">
-    <form action="">
-        <label for=""> Student Email</label>
-        <input type="email" placeholder="Enter Email here"><br>
+    <form [formGroup]="loginform">
+        <label for="">Student Email</label>
+        <input type="email" placeholder="Enter Email here" formControlName="email"><br>
+        
         <label>Password</label>
-        <input type="password" placeholder="Enter Your Password"><br>
+        <input type="password" placeholder="Enter Your Password" formControlName="password"><br>
 
         <div class="button1">
-            <button class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" (click)="login()">Login</button>
         </div>
 
 

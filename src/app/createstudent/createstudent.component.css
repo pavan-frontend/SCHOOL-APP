@@ -6,26 +6,32 @@
 
 }
 form{
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(227, 227, 227);
     width: 800px;
-    height: 100%;
+    height: 90%;
     padding: 10px;
     text-align: center;
     overflow:auto;
     border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+h1{
+    text-align: center;
+    color: rgb(14, 14, 13);
+    /* margin-top: 10px; */
 }
 label{
     width: 100px;
     margin: 20px;
     font-size: 20px;
     font-weight: bold;
-    color: aliceblue;
+    color: rgb(14, 15, 16);
     
 }
 input{
     height: 40px;
     border-radius: 10px;
-    width: 300px;
+    width: 500px;
 }
 .but{
     width: 200px;
@@ -35,14 +41,20 @@ input{
     padding: 8px;
 }
 .state{
-    width: 300px;
+    width: 500px;
     height: 40px;
     border-radius: 5px;
     
 }
 .radio{
-    width: 15px;
+    width: 25px;
+    
 }
 .label2{
-    width: 80px;
+    width: 150px;
+    font-size: 20px;
+}
+.btnmarks{
+    width: 200px;
+    
 }

@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { AllstudentsComponent } from './allstudents/allstudents.component';
 import {HttpClientModule} from '@angular/common/http';
+import { TimePipe } from './time.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     DashboardComponent,
     HomeComponent,
     CreatestudentComponent,
-    AllstudentsComponent
+    AllstudentsComponent,
+    TimePipe
   ],
   imports: [
     BrowserModule,

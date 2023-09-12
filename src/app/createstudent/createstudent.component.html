@@ -1,9 +1,15 @@
-<h1>STUDENT REGISTRATION FORM</h1>
+
 <div class="parent">
 
     <form [formGroup]="studentform">
+    <h1>STUDENT REGISTRATION FORM</h1>
+
         <label>Name:</label>
         <input type="text" formControlName="name"><br>
+        <div class="text-danger" *ngIf="studentform.get('name')?.touched && studentform.get('name')?.invalid ">
+            <p *ngIf="studentform.get('name')?.errors?.['required']">Name is Required</p>
+            <p *ngIf="studentform.get('name')?.errors?.['minlength']">Minimum Three Characters Requered</p>
+        </div>
 
         <label>Class:</label>
         <input type="text" formControlName="class"><br>
@@ -13,6 +19,9 @@
 
         <label>Email:</label>
         <input type="email" formControlName="email"><br>
+        <div class="text-danger" *ngIf="studentform.get('email')?.touched && studentform.get('email')?.invalid ">
+           <p *ngIf="studentform.get('email')?.errors?.['required']">Email Requered</p>
+        </div>
 
         <label>DOB:</label>
         <input type="date" formControlName="dateofbirth"><br>
@@ -29,6 +38,9 @@
                 <option>AndhraPradesh</option>
             </select>
             <br>
+            <div class="text-danger" *ngIf="studentform.get('address')?.get('state')?.touched && studentform.get('address')?.get('state')?.invalid ">
+              <p *ngIf="studentform.get('address')?.get('state')?.errors?.['required']">State Requered</p>
+            </div>
             <label>Pincode</label>
             <input type="number" formControlName="pincode">
 
@@ -53,7 +65,26 @@
             <label>Hostel Fee</label>
             <input type="number" formControlName="hostelFee">
         </div>
+        <label>Comments</label>
+        <textarea name="" id="" cols="40" rows="1" style="width: 500px;">Cooments</textarea>
 
+        <button  class="btn btn-info but" (click)="marks()">marks</button>
+        <div formArrayName="marks">
+            <div *ngFor="let marks of marksFormArray.controls; let i=index">
+                <div formGroupName="{{i}}">
+
+                    <label>Class</label>
+                    <input type="number" formControlName="class"><br>
+                    <label>year</label>
+                    <input type="number" formControlName="year"><br>
+                    <label>percentage</label>
+                    <input type="number" formControlName="percentage"><br>
+
+                    <button  class="btn btn-danger" (click)="delete(i)">Delete</button>
+
+                </div>
+            </div>
+        </div>
 
 
 
